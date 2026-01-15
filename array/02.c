@@ -6,16 +6,19 @@ int main(){
     printf("Enter the arr: ");
     for(int i= 0;i<5;i++){
         scanf("%d",&arr[i]);
-        for(int j=5;j>0;j--){
-            i=0;
+        
+    }
+    int i=0;
+    for(int j=4;j>=0;j--){
+
             rev[i] = arr[j];
             i++;
-        }
     }
+
     printf("The arrays are: ");
-    printf("arr\trev");
+    printf("arr\trev\n");
     for(int i=0;i<5;i++){
-        printf("%d\t%d",arr[i],rev[i]);
+        printf("%d\t%d\n",arr[i],rev[i]);
     }
     return 0;
 }
