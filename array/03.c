@@ -8,17 +8,25 @@ int main(){
         scanf("%d",&arr[i]);
     }
 
-    int large = arr[0];
-    int sec;
+    int large,secl;
+
+    if(arr[0]>arr[1]){
+        large = arr[0];
+        secl = arr[1];
+    }
+    else {
+        large = arr[1];
+        secl = arr[0];
+    }
     for(int i=1;i<=5;i++){
-        if(large < arr[i]){
-            sec = large;
+        if(arr[i] > large){
+            secl = large;
             large = arr[i];
-
         }
-                    
-}
-
-printf("\nLarge = %d",large);
-printf("\nsecond large Is  = %d",sec);
-}
+        else if( arr[i] > secl && arr[i] != large){
+            secl = arr[i];
+        }
+    }
+    printf("\nLarge = %d",large);
+    printf("\nsecond large Is  = %d",secl);      
+    }
