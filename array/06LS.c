@@ -20,8 +20,8 @@ int main(){
         }
     }
     if(found){
-        printf("it is present at :: %d ",index,+1);
+        printf("it is present at :: %d ",index+1);
     }
-    else{printf("IT is not possive");
+    else{printf("It is not possive");
 }
 }
