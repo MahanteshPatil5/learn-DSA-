@@ -11,26 +11,27 @@ int main(){
     for(int i = 0 ; i<n;i++){
         scanf("%d",&arr[i]);
     }
-    printf("ENter the key to find in the arr: ");
+    printf("Enter the key to find index in the arr: ");
     scanf("%d",&key);
 
-    int found = 0,first = 0,last = n-1,mid,ind=0;
+    int found = 0,first = 0,last = n-1,mid,ind=n;
 
     while(first<=last){
         mid = (first + last)/2;
-        if(arr[mid] == key){
+        if(arr[mid] >= key){
             found = 1;
             ind = mid;
+            last = mid-1;
+            // break;
         }
-        else if(arr[mid] < key){
-            
+        // else if(arr[mid] > key){
+        //     last = mid - 1;
+        // }
+        else{
+            first = mid +1;
         }
     }
-    if(found==0){
-        printf("\nthe key is not found in the arr");
-    }
-    else{
-        printf("The key %d can be inserted at the place:%d",key,ind);
-    }
+    printf("The key %d can be inserted at the place : %d",key,ind);
+    
 return 0;
 }
