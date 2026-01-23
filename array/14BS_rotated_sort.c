@@ -2,25 +2,6 @@
 
 #include<stdio.h>
 
-void leftsort(int arr[],int n,int key){
-    int found = 0,first = 0,last = n-1,mid;
-    while(first<=last){
-        mid = (first+last)/2;
-        if(arr[mid] == key){
-            found = 1;
-            break;
-        }
-        if(key < arr[mid]){
-            last = mid-1;
-        }
-        else{
-            first = mid+1;
-        }
-    }
-    if(found == 1){
-        printf("The key is found at the index :: %d",mid);
-    }
-}
 int main(){
     int n,key;
     printf("Enter number of elmens in array : ");
@@ -39,12 +20,16 @@ int main(){
     while(first<=last){
         mid = (first+last)/2;
         if(arr[first] <= arr[mid]){
+            if(arr[mid] == key) { found = 1; break; }
             last = mid-1;
-            leftsort(arr,n,key);
         }
         else{
             first = mid+1;
+            // if(arr[mid] == key) { found = 1; break; }
         }
     }
+    if(found == 1){
+    printf("The key is at : %d",mid);}
+    else{printf("Not found");}
 return 0;
 }
