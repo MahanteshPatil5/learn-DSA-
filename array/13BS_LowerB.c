@@ -16,7 +16,16 @@ int main(){
 
     int found = 0,first = 0,last = n-1,mid,ind=0;
 
-    while(first<=last)
+    while(first<=last){
+        mid = (first + last)/2;
+        if(arr[mid] == key){
+            found = 1;
+            ind = mid;
+        }
+        else if(arr[mid] < key){
+            
+        }
+    }
     if(found==0){
         printf("\nthe key is not found in the arr");
     }
