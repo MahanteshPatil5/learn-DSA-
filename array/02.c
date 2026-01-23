@@ -10,12 +10,11 @@ int main(){
     }
     int i=0;
     for(int j=4;j>=0;j--){
-
             rev[i] = arr[j];
             i++;
     }
 
-    printf("The arrays are: ");
+    printf("The arrays are: \n");
     printf("arr\trev\n");
     for(int i=0;i<5;i++){
         printf("%d\t%d\n",arr[i],rev[i]);
