@@ -19,17 +19,28 @@ int main(){
 
     while(first<=last){
         mid = (first+last)/2;
+        if(arr[mid] == key) { found = 1; break; }
         if(arr[first] <= arr[mid]){
-            if(arr[mid] == key) { found = 1; break; }
-            last = mid-1;
+            if(key>= arr[first] && key<= arr[mid]){
+                last = mid-1;
+            }
+            else{
+                first = mid+1;
+            }
         }
         else{
-            first = mid+1;
-            // if(arr[mid] == key) { found = 1; break; }
-        }
+            if(key> arr[mid] && key<= arr[last]){
+                first = mid+1;
+            }
+            else{
+                last = mid-1;
+            }
+            }
+
+
     }
     if(found == 1){
-    printf("The key is at : %d",mid);}
+    printf("The key is at : %d",mid+1);}
     else{printf("Not found");}
 return 0;
 }
