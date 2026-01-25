@@ -16,7 +16,7 @@ int main(){
     scanf("%d",&target);
 
     int start = 0,last = n-1,sum,found = 0;
-    while(start<=last){
+    while(start<last){
         sum = arr[start]+arr[last];
 
         if(sum == target){
