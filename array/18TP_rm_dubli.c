@@ -14,17 +14,16 @@ int main(){
 
     first=0;last=n-1;
 
-    while(first <= last){
-        for(int i=0;i<n;i++){
-            if(arr[first] == arr[i]){
+    for(int i=1;i<n;i++){
+            if(arr[first] != arr[i]){
+                first++;
                 arr[first] = arr[i];
-                
             }
-            first++;
-        }
+            
     }
+    
     printf("The the elemts of array:");
-    for(int i=0;i<n;i++){
+    for(int i=0;i<=first;i++){
         printf("%d",arr[i]);
     }
     return 0;
