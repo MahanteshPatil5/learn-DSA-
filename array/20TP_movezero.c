@@ -14,17 +14,12 @@ int main(){
     }
     int first =0,last=n-1,i=0;
     while(first<last){
-
-        if(arr[i] != 0){
+       if(arr[i] != 0){
             arr[first] = arr[i];
+            first++;
         }
-        else{
-            arr[last] = arr[i];
-            last--;
-        }
-
         i++;
-        first++;
+        
     }
     printf("\nElements of array ::");
     for(int i=0;i<n;i++){
