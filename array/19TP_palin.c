@@ -17,6 +17,7 @@ int main(){
     while(first<last){
         if(arr[first] != arr[last]){
             pali = 0;
+            break;
         }
         first++;last--;
     }
@@ -25,7 +26,7 @@ int main(){
     }
     else{
         printf("\nElements of array \n::");
-        for(int i=0;i<5;i++){
+        for(int i=0;i<n;i++){
             printf(" %d ",arr[i]);
         }
         printf("  are in palindrmic way::");
