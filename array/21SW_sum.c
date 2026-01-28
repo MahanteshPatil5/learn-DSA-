@@ -10,21 +10,26 @@ int main(){
     printf("ENter the elemts of array : ");
     for(int i =0;i<n;i++){
         scanf("%d",&arr[i]);
+        
     }
 
     printf("Enter the lenght of subarray k : ");
     scanf("%d",&k);
     for(int i=0;i<k;i++){
         sum = sum+arr[i];
+        printf(" %d ",arr[i]);
     }
+    printf("\n");
     int first =0,last=k;
     while(last<n){
         sum = sum - arr[first] + arr[last];
+        
         first++;
         last++;
-        // else{
-        
-        // }
+        for(int j=first;j<last;j++){
+            printf(" %d ",arr[j]);    
+        }
+        printf("\n");
     }
 
     printf("THe sum is :: %d",sum);
