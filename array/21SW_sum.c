@@ -3,7 +3,7 @@
 
 #include<stdio.h>
 int main(){
-    int n,k;
+    int n,k,sum=0;
     printf("Enter number of elemts of arrya: ");
     scanf("%d",&n);
     int arr[n];
@@ -14,5 +14,19 @@ int main(){
 
     printf("Enter the lenght of subarray k : ");
     scanf("%d",&k);
-    
+    for(int i=0;i<k;i++){
+        sum = sum+arr[i];
+    }
+    int first =0,last=k;
+    while(last<n){
+        sum = sum - arr[first] + arr[last];
+        first++;
+        last++;
+        // else{
+        
+        // }
+    }
+
+    printf("THe sum is :: %d",sum);
+    return 0;
 }
