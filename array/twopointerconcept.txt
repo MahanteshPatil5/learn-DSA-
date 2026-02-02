@@ -1,0 +1,29 @@
+In the BS we use 2 varialbes and then loop also so to remove that we use 
+2 pointers like start and end 
+
+Types of Two Pointer (IMPORTANT)
+
+🔹 Type 1: Start–End Pointer
+Used in:
+reverse array
+pair sum in sorted array
+palindrome check
+
+🔹 Type 2: Slow–Fast Pointer
+Used in:
+remove duplicates
+move zeros
+filtering elements
+Example idea:
+slow → keeps valid position
+fast → scans array
+
+
+we have to think about this 2 pointers when 
+1.array is sorted 
+2.do i need pairs
+3.can i reduse the nested loop 
+
+
+this 2 pointers concept is used to soloove time complexity 
+like reduce O(n^2) to O(n) 
