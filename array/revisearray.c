@@ -10,18 +10,16 @@ int main(){
     for(int i=0;i<5;i++){
         scanf("%d",&arr[i]);
     }
+    int max = arr[0],min=arr[0];
 
-    int found=0,key,index;
-    printf("\nEnter a key to find in array: ");
-    scanf("%d",&key);
-
-    for(int i = 0 ;i<5; i++){
-        
+    for(int i = 0 ;i<=5; i++){
+        if(arr[i]>max){
+            max = arr[i];
+        }
+        if(arr[i]<min){
+            min = arr[i];
+        }
     }
-
-    if(found){
-        printf("it is present at :: %d ",index+1);
-    }
-    else{printf("It is not possive");
-}
+    printf("\nMax of the number is : %d",max);
+    printf("\nMin of the number is : %d",min);
 }
