@@ -10,9 +10,9 @@ int main(){
     for(int i=0;i<5;i++){
         scanf("%d",&arr[i]);
     }
-    int max = arr[0],min=arr[0];
+    int max = arr[0],min=arr[0],rev[5];
 
-    for(int i = 0 ;i<=5; i++){
+    for(int i = 0 ;i<5; i++){
         if(arr[i]>max){
             max = arr[i];
         }
@@ -20,6 +20,21 @@ int main(){
             min = arr[i];
         }
     }
+int first = 0, last = 4;
+
+while(first < last){
+    int temp = arr[first];
+    arr[first] = arr[last];
+    arr[last] = temp;
+
+    first++;
+    last--;
+}
+
     printf("\nMax of the number is : %d",max);
     printf("\nMin of the number is : %d",min);
+    printf("\nThe reverse array of array is : ");
+    for(int i=0;i<5;i++){
+        printf(" %d ",arr[i]);
+    }
 }
