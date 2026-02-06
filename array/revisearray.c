@@ -5,14 +5,17 @@
 #include<stdlib.h>
 
 int main(){
-    int arr[5];
-    printf("Enter elemts to arr[5] : ");
-    for(int i=0;i<5;i++){
+    int n;
+    printf("\nEnter the number of elements of array:: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter elemts to arr[n] : ");
+    for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    int max = arr[0],min=arr[0],rev[5];
+    int max = arr[0],min=arr[0];
 
-    for(int i = 0 ;i<5; i++){
+    for(int i = 0 ;i<n; i++){
         if(arr[i]>max){
             max = arr[i];
         }
@@ -34,7 +37,7 @@ while(first < last){
     printf("\nMax of the number is : %d",max);
     printf("\nMin of the number is : %d",min);
     printf("\nThe reverse array of array is : ");
-    for(int i=0;i<5;i++){
+    for(int i=0;i<n;i++){
         printf(" %d ",arr[i]);
     }
 }
