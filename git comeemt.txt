@@ -1,0 +1,13 @@
+git add newone .c
+
+git commit -m "msg:
+
+git push
+
+new file
+
+git add .
+
+git commit -m "Added new folder for Arrays"
+
+git push
