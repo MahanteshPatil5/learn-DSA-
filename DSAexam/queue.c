@@ -11,6 +11,9 @@ void addq(){
         scanf("%d",&item);
         rear++;
         q[rear] = item;
+        if(front == -1){
+            front = 0;
+        }
     }
 }
 void delq(){
