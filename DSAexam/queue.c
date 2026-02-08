@@ -8,7 +8,7 @@ void addq(){
     else{
         int item;
         printf("Enter Elemets to be added to q : ");
-        scanf("%d",item);
+        scanf("%d",&item);
         rear++;
         q[rear] = item;
     }
@@ -25,15 +25,30 @@ void delq(){
 }
 void display(){
     printf("The Elements of the Q are : ");
-    for(int i=front;i<rear;i++){
+    for(int i=front;i<=rear;i++){
         printf(" %d ",q[i]);
     }
 }
 int main(){
-    int ch=1;
-    while(ch){
+    int ch;
+    while(1){
         printf("1.Add element 2.Del element 3.Display element ");
         printf("\nEnter the ur choice : ");
-        
+        scanf("%d",&ch);
+        switch(ch){
+            case 1:
+            addq();break;
+
+            case 2:
+            delq();break;
+
+            case 3:
+            display();break;
+            
+            default:
+            printf("Enter profer number : ");
+            break;
+        }
+    
     }
 }
