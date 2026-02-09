@@ -2,6 +2,7 @@
 #include<stdlib.h>
 
 int value; 
+
 struct node
 {
   int key;
@@ -20,8 +21,27 @@ void insertF(int value){
     temp->next = head;
     return head;}
 }
+void disp(){
+    struct node *temp;
+    temp = (struct node*)malloc(sizeof(struct node));
+    temp = head;
+    if(head == NULL){
+        printf("The head is empty  ");
+    }
+    
+    else{
+        while(temp->next != NULL){
+            printf(" the %d ",temp->key);
+            temp = temp->key;
+        }
+    }
+}
 int main(){
-    printf("Enter element to insert at front of SLL : ");
+    printf("\nEnter element to insert at front of SLL : ");
     scanf("%d",&value);
-    insertF(value);
+    while(1){
+        insertF(value);
+        disp();
+    }
+    return 0;
 }
