@@ -9,7 +9,7 @@ struct node *head = NULL;
 
 void insertF(){
     int value;
-    printf("Enter the value to enter @ last of ll :: ");
+    printf("Enter the value to enter @ first of ll :: ");
     scanf("%d",&value);
     struct node *temp;
     temp = (struct node*)malloc(sizeof(struct node));
@@ -21,7 +21,8 @@ void insertF(){
     else{
     temp->next = head;
     head = temp;
-    return head;}
+    return;
+}
 }
 
 void insertE()
@@ -64,13 +65,17 @@ void delE(){
     if(head == NULL){
         printf("There is no nodes in the LL ");
     }
+    else if(head->next == NULL){
+        free(head);
+
+    }
     else{
         c = head;
         while(c->next != NULL){
             p = c;
             c = c->next;
         }
-        head = p;
+        p->next = NULL;
         
         printf("The deleted node is :: %d",c->key);
         free(c);
