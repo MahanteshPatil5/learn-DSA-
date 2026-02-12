@@ -20,7 +20,7 @@ int main(){
         printf(" %d ",arr[i]);
     }
     printf("\n");
-    int first =0,last=k,maxsum=0;
+    int first =0,last=k,maxsum=sum;
     while(last<n){
         sum = sum - arr[first] + arr[last];
         if(sum>maxsum){
@@ -34,7 +34,7 @@ int main(){
         printf("\n");
     }
 
-    printf("THe sum is :: %d",sum);
+    printf("THe last subarray sum is :: %d",sum);
     
     printf("\nTHe maxsum is :: %d",maxsum);
     return 0;
