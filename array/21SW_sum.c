@@ -20,10 +20,12 @@ int main(){
         printf(" %d ",arr[i]);
     }
     printf("\n");
-    int first =0,last=k;
+    int first =0,last=k,maxsum=0;
     while(last<n){
         sum = sum - arr[first] + arr[last];
-        
+        if(sum>maxsum){
+            maxsum = sum;
+        }
         first++;
         last++;
         for(int j=first;j<last;j++){
@@ -33,5 +35,7 @@ int main(){
     }
 
     printf("THe sum is :: %d",sum);
+    
+    printf("\nTHe maxsum is :: %d",maxsum);
     return 0;
 }
