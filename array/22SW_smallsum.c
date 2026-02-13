@@ -12,7 +12,8 @@ int main(){
     }
     printf("Enter the Target value :: ");
     scanf("%d",&target);
-
+    
+    int first =0,last,maxsum=sum;
     // while()
     return 0;
 }
