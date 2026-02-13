@@ -14,12 +14,16 @@ int main(){
     }
     printf("Enter the Target value :: ");
     scanf("%d",&target);
-    
-    // printf("Enter the value for K : ");
-    // scanf("%d",&k);
 
     int minLen=n-1,sum=0,first=0;
-    
+    for (int last=0;last<=(n-1);last++){
+        sum = arr[last];
+        while (sum>=target)
+        {
+            
+        }
+        
+    }
     // while()
     return 0;
 }
