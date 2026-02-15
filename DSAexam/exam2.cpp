@@ -1,41 +1,59 @@
 #include<iostream>
 using namespace std;
 
-// use of Class and object
-// class students{
+// // use of Class and object
+// // class students{
+// //     public:
+// //     int rollno;
+// //     void show(){
+// //         cout<<"R N : "<<rollno;
+// //     }
+// // };
+// // int main(){
+// //     students ClassA[10];
+// //     ClassA[1].rollno = 10;
+// //     ClassA[1].show();
+// // }
+
+// class A{
 //     public:
-//     int rollno;
-//     void show(){
-//         cout<<"R N : "<<rollno;
+//     int a,b,c;
+//     A(int x,int y,int z){
+//         a=x;
+//         b=y;
+//         c=z;
+//         if(a>b && a>c){
+//             cout<<"large is :: "<<a;
+//         }
+//         else if(b>a && b>c){
+//             cout<<"large is :: "<<b;
+//         }
+//         else{
+//             cout<<"large is :: "<<c;
+//         }
 //     }
 // };
-// int main(){
-//     students ClassA[10];
-//     ClassA[1].rollno = 10;
-//     ClassA[1].show();
-// }
 
-class A{
-    public:
-    int a,b,c;
-    A(int x,int y,int z){
-        a=x;
-        b=y;
-        c=z;
-        if(a>b && a>c){
-            cout<<"large is :: "<<a;
-        }
-        else if(b>a && b>c){
-            cout<<"large is :: "<<b;
+// int main(){
+//     A a(10,20,30);
+// }
+// // cheat
+
+
+// THis is to use the Exception handling here
+int main(){
+    int age;
+    cout<<"ENter your age :: ";
+    cin>>age;
+    try{
+        if(age>= 18){
+            cout<<"acess granted You r allowed to enter  ";
         }
         else{
-            cout<<"large is :: "<<c;
+            throw(age);
         }
     }
-};
-
-int main(){
-    A a(10,20,30);
+    catch(int num){
+        cout<<"you r not allowed to enter  your age is "<<num;
+    }
 }
-// cheat
-
