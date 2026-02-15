@@ -37,3 +37,5 @@ class A{
 int main(){
     A a(10,20,30);
 }
+// cheat
+
