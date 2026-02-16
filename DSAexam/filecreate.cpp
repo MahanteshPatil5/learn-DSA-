@@ -21,4 +21,6 @@ int main(){
     while(file.get(ch)){
         cout<<ch;
     }
+    file.close();
+    return 0;
 }
