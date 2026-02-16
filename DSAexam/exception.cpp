@@ -32,9 +32,10 @@ int main(){
     for(int ind=0;ind<5;ind++){
     cin>>arr[ind];}
 
-    cout<<"ENter the array"
+    cout<<"ENter the array index to access that value of array ";
+    cin>>ind;
     try{
-    if(ind<0 && ind>5){
+    if(ind<0 || ind>5){
         throw(ind);
     }}
     catch(int){
