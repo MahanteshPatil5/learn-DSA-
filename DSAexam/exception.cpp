@@ -26,16 +26,19 @@ using namespace std;
 
 // Array out of bound
 int main(){
-    int arr[5];
+    int n;
+    cout<<"Enter the number of elemets of the array : ";
+    cin>>n;
+    int arr[n];
     int ind;
-    cout<<"ENter the elements of the array arr[5] ";
-    for(int ind=0;ind<5;ind++){
+    cout<<"ENter the elements of the array arr[n] ";
+    for(int ind=0;ind<n;ind++){
     cin>>arr[ind];}
 
     cout<<"ENter the array index to access that value of array ";
     cin>>ind;
     try{
-    if(ind<0 || ind>5){
+    if(ind<0 || ind>n){
         throw(ind);
     }}
     catch(int){
