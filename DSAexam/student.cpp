@@ -9,7 +9,7 @@ class student{
 };
 
 int main(){
-    cout<<"Program to print the student details by taking from the teacher ";
+    cout<<"\nProgram to print the student details by taking from the teacher ";
     int n;
     cout<<"\nEnter the number of students : ";
     cin>>n;
@@ -23,13 +23,24 @@ int main(){
     cout<<"\nEnter the student Details :(name roll number and persentage )";
     for(int i=0;i<n;i++){
         cout<<"\nEnter data of std"<<(i+1);
+        cout<<"name :: ";
         cin>>stud[i].name;
-        cin>>stud[i].roll;
-        cin>>stud[i].pers;
         myfile<<stud[i].name;
+        cout<<"roll no. :: ";
+        cin>>stud[i].roll;
         myfile<<stud[i].roll;
+        cout<<"persentage :: ";
+        cin>>stud[i].pers;
         myfile<<stud[i].pers;
     }}
+    myfile.close();
+
+    myfile.open("stdent.txt",ios::in);
+    for(int j=0;j<n;j++){
+        cout<<"\n\nstudent :: "<<j+1;
+        cout<<"\nName : "<<stud[j].name<<"\n Roll no. : "<<stud[j].roll<<"\n Percentage : "<<stud[j].pers;
+    }
+    
     cout<<"\nEnter a roll number to find the student: ";
     int roll;
     cin>>roll;
@@ -38,6 +49,10 @@ int main(){
         cout<<"name: "<<stud[i].name<<"\nroll number : "<<stud[i].roll<<"\npercentage : "<<stud[i].pers;
     }
     else{
-        cout<<"\nNoo student with that roll :: ";}
+        cout<<"\nNoo student with that roll :: ";
     }
+    }
+    
+    myfile.close();
+
 }
