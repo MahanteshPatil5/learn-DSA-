@@ -37,6 +37,7 @@ int main(){
     if(roll == stud[i].roll){
         cout<<"name: "<<stud[i].name<<"\nroll number : "<<stud[i].roll<<"\npercentage : "<<stud[i].pers;
     }
+    else{
+        cout<<"\nNoo student with that roll :: ";}
     }
-cout<<"\nNoo student with that roll :: ";
 }
