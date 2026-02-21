@@ -17,10 +17,12 @@ int main(){
 
     int minLen=n-1,sum=0,first=0;
     for (int last=0;last<=(n-1);last++){
-        sum = arr[last];
+        sum += arr[last];
         while (sum>=target)
         {
-            
+           last - first + 1;
+           sum = sum - arr[first];
+           first++;
         }
         
     }
