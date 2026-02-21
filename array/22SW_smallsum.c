@@ -15,17 +15,20 @@ int main(){
     printf("Enter the Target value :: ");
     scanf("%d",&target);
 
-    int minLen=n-1,sum=0,first=0;
+    int minLen=n-1,sum=0,first=0,len;
     for (int last=0;last<=(n-1);last++){
         sum += arr[last];
         while (sum>=target)
         {
-           last - first + 1;
+           len = last - first + 1;
+           if(len < minLen){
+            minLen = len;
+           }
            sum = sum - arr[first];
            first++;
         }
         
     }
-    // while()
+    printf("SUM = %d",sum);
     return 0;
 }
