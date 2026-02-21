@@ -29,6 +29,6 @@ int main(){
         }
         
     }
-    printf("SUM = %d",sum);
+    printf("min len = %d",minLen);
     return 0;
 }
