@@ -5,7 +5,7 @@ int main(){
     int n,target;
 
     printf("Enter the number eements in the array :: ");
-    scanf(" %d ",&n);
+    scanf("%d",&n);
 
     int arr[n];
     printf("Enter the Elements of array :: ");
