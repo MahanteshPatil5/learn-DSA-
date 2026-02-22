@@ -1,3 +1,4 @@
+// this  program will find the lage sub array when target is given 
 #include<stdio.h>
 int main(){
     int n;
@@ -16,17 +17,18 @@ int main(){
     
     for(int last=0;last<n;last++){
         sum = sum+arr[last];
-        while(sum>target){
+        while(sum>target)
+        {
             sum = sum-arr[first];
-            first++; 
+            first++;
         }
         if(sum == target){
-        length = last-first+1;
+            length = last-first+1;
         }
-        if(length>max){
+        if(length>max){ 
             max = length;
         }
-
     }
+    
     printf("The lenght of the subaray is : %d",max);
 }
