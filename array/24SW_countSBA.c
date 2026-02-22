@@ -14,10 +14,21 @@ int main(){
     printf("ENter the target :: ");
     scanf("%d",&target);
 
-    int sum=0,first=0;
+    int sum=0,first=0,count=0;
 
     for(int last=0;last<n;last++){
         sum = sum+arr[last];
+        if(sum==target){
+            count++;
+            sum = sum-arr[first];
+            first++;
+        }
+        if(sum>target){
+            sum = sum-arr[first];
+            first++;
+        }
+
     }
+    printf("number of sub array :: %d",count);
 
 }
