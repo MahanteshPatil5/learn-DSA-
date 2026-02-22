@@ -24,9 +24,9 @@ int main(){
         }
         if(sum == target){
             length = last-first+1;
-        }
-        if(length>max){ 
-            max = length;
+            if(length>max){ 
+                max = length;
+            }
         }
     }
     
