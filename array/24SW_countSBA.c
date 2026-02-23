@@ -18,20 +18,16 @@ int main(){
 
     for(int last=0;last<n;last++){
         sum = sum+arr[last];
-        if(sum==target){
+        while(sum==target){
             count++;
             sum = sum-arr[first];
             first++;
         }
-        if(sum>target){
+        while(sum>target){
             sum = sum-arr[first];
             first++;
         }
-        if(sum<target){
-            sum = sum-arr[last];
-            last--;
-        }
-
+       
     }
     printf("number of sub array :: %d",count);
 
