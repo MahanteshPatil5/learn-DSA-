@@ -27,6 +27,10 @@ int main(){
             sum = sum-arr[first];
             first++;
         }
+        if(sum<target){
+            sum = sum-arr[last];
+            last--;
+        }
 
     }
     printf("number of sub array :: %d",count);
