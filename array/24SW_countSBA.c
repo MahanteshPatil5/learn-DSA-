@@ -30,5 +30,5 @@ int main(){
        
     }
     printf("number of sub array :: %d",count);
-
+    return 0;
 }
