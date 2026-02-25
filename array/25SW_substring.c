@@ -1,3 +1,4 @@
+// this problem is to find the longest substring without repeating characters 
 #include<stdio.h>
 int main(){
     int n;
@@ -6,17 +7,18 @@ int main(){
     char arr[n];
     printf("Enter the elemets of charracter array : ");
     for(int i=0;i<n;i++){
-        scanf("%c",&arr[i]);
+        scanf(" %c",&arr[i]);
     }
 
     int first = 0,len=0;
+    char win;
     for(int last=0;last<n;last++){
-        len = last - first + 1;
-        while (arr[first] == arr[last])
-        {
+        if(arr[first] == arr[last]){
             first++;
         }
-        
+        else{
+            win = win+arr[last];
+        }        
     }
     printf("LEnght of highest : %d",len);
 }
