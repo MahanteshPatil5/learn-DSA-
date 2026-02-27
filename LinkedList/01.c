@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int val;
 
@@ -10,7 +11,7 @@ struct node{
 struct node *head = NULL;
 
 
-void insertFront(val){
+void insertFront(int val){
     struct node *new = (int*)malloc(sizeof(struct node)) ;
 
     new->data = val;
@@ -34,9 +35,28 @@ void display(){
 }
 
 int main(){
+    int ch;
     printf("Enter the Element to enter to the LL : ");
     scanf("%d",&val);
-    insertFront(val);
-    display();
-    printf("HELLO WORLD");
+    while(1){
+        printf("Enter your choice : ");
+        scanf("%d",&ch);
+        switch (ch)
+        {
+        case 1:
+            insertFront(val);
+            break;
+        
+        case 2:
+            display();
+            break;
+        case 3:
+            exit(1);
+
+        default:
+            break;
+        }
+        
+    }
+    // printf("HELLO WORLD");
 }
