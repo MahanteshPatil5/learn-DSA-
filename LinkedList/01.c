@@ -22,25 +22,26 @@ void insertFront(){
 }
 
 void display(){
+    struct node *temp = (int*)malloc(sizeof(struct node));
     if(head == NULL){
-        printf("the haed isnull so not able to display ");
+        printf("the haed is null so not able to display ");
         return;
     }
     else{
-        while (head->next != NULL)
+        temp = head;
+        while (temp->next != NULL)
         {
-            printf(" %d ",head->data);
-            head = head->next;
+            printf(" %d ",temp->data);
+            temp = temp->next;
         }
         
     }
 }
 
 int main(){
-    display();
     int ch;
     while(1){
-        printf("1.Insert front 2.Display 3.Exit\n");
+        printf("\n1.Insert front 2.Display 3.Exit\n");
         printf("Enter your choice : ");
         scanf("%d",&ch);
         switch(ch)
