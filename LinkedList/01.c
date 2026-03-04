@@ -37,6 +37,7 @@ void display(){
 }
 
 int main(){
+    display();
     int ch;
     while(1){
         printf("1.Insert front 2.Display 3.Exit\n");
