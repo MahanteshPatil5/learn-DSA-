@@ -42,19 +42,21 @@ int main(){
         printf("1.Insert front 2.Display 3.Exit\n");
         printf("Enter your choice : ");
         scanf("%d",&ch);
-        switch (ch)
+        switch(ch)
         {
         case 1:
-            insertFront(val);
+            insertFront();
             break;
         
         case 2:
             display();
             break;
+
         case 3:
-            exit(1);
+            exit(0);
 
         default:
+            printf("Enter the proper number(int): ");
             break;
         }
         
