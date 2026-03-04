@@ -11,9 +11,11 @@ struct node{
 struct node *head = NULL;
 
 
-void insertFront(int val){
+void insertFront(){
     struct node *new = (int*)malloc(sizeof(struct node)) ;
-
+    
+    printf("Enter the Element to enter to the LL : ");
+    scanf("%d",&val);
     new->data = val;
     new->next = head;
     head = new;
@@ -36,9 +38,8 @@ void display(){
 
 int main(){
     int ch;
-    printf("Enter the Element to enter to the LL : ");
-    scanf("%d",&val);
     while(1){
+        printf("1.Insert front 2.Display 3.Exit\n");
         printf("Enter your choice : ");
         scanf("%d",&ch);
         switch (ch)
