@@ -27,15 +27,13 @@ void display(){
         printf("the haed is null so not able to display ");
         return;
     }
-    else{
-        temp = head;
-        while (temp->next != NULL)
-        {
-            printf(" %d ",temp->data);
-            temp = temp->next;
-        }
-        
+    temp = head;
+    while (temp->next != NULL)
+    {
+        printf(" %d ",temp->data);
+        temp = temp->next;
     }
+        
 }
 
 int main(){
