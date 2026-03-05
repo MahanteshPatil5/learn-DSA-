@@ -21,6 +21,25 @@ void insertFront(){
     head = new;
 }
 
+void insertEnd(){
+    struct node *new = (int*)malloc(sizeof(struct node)),*temp;
+    
+    printf("Enter the Element to enter to the LL : ");
+    scanf("%d",&val);
+
+    if(head == NULL){
+        new->data = val;
+        new->next = NULL;
+        head->next = new;
+    }
+    else{
+        temp = head;
+        while(temp->next != NULL){
+            temp = temp->next;
+        }
+        temp->next = new;
+    }
+}
 void display(){
     struct node *temp = (int*)malloc(sizeof(struct node));
     if(head == NULL){
