@@ -68,16 +68,19 @@ int main(){
             break;
         
         case 2:
-            display();
+            insertend();
             break;
             
         case 3:
-            display();
+            delfront();
             break;
         case 4:
-            display();
+            delend();
             break;
         case 5:
+            display();
+            break;
+        case 6:
             exit(0);
 
         default:
