@@ -58,7 +58,7 @@ void display(){
 int main(){
     int ch;
     while(1){
-        printf("\n1.Insert front 2.Display 3.Exit\n");
+        printf("\n1.Insert front 2.Insert End 3.Del front 4.Del end  5.Display 6.Exit\n");
         printf("Enter your choice : ");
         scanf("%d",&ch);
         switch(ch)
@@ -70,8 +70,14 @@ int main(){
         case 2:
             display();
             break;
-
+            
         case 3:
+            display();
+            break;
+        case 4:
+            display();
+            break;
+        case 5:
             exit(0);
 
         default:
