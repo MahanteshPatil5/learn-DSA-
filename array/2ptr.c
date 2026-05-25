@@ -21,12 +21,12 @@ int main()
     int arr[n];
     printf("Enter the SORTED array: ");
     for(int i=0;i<n;i++){
-        scanf("%d",&arrr[i]);
+        scanf("%d",&arr[i]);
     }
     printf("ENter ther target element : ");
     scanf("%d",&T);
 
-    int left=0,right=n-1,sum;
+    int left=0,right=n-1,sum,found=0;
     while(left<right)
     {
         sum = arr[left]+arr[right];
@@ -34,13 +34,21 @@ int main()
         if(sum<T){
             left++;
         }
-        elseif(sum>T){
+        else if(sum>T)
+        {
             right--;
         }
-        else{
+        else
+        {
+            found =1;
             printf("YES");
+            printf("\n%d + %d = %d",arr[left],arr[right],T);
+            break;
         }
 
     }
-
+    
+    if(found!=1){
+        printf("The array do not have those elemts which sums to target ");
+    }
 }
