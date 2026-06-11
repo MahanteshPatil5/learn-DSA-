@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Mahantesh/Desktop/3rd sem/DSA/DSA learn",
-      "program": "c:/Users/Mahantesh/Desktop/3rd sem/DSA/DSA learn/build/Debug/outDebug",
+      "cwd": "g:/3rd sem/3rd sem notes/DSA/DSA learn/array",
+      "program": "g:/3rd sem/3rd sem notes/DSA/DSA learn/array/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
