@@ -10,7 +10,22 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    int left=0,right=n-1;
-    
+    int left=0,right=0;
+    for(right =0;right<n;right++){
+        if(arr[right]!=0){
+            int temp=arr[right];
+            arr[right] = arr[left];
+            arr[left] = temp;
+            right++;
+            left++;
+        }
+        else{
+            right++;
+        }
+    }
+    cout<<"array : ";
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<"\n";
+    }
     return 0;
 }
