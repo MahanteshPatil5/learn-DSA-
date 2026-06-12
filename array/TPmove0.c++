@@ -16,14 +16,11 @@ int main(){
             int temp=arr[right];
             arr[right] = arr[left];
             arr[left] = temp;
-            right++;
+            
             left++;
         }
-        else{
-            right++;
-        }
     }
-    cout<<"array : ";
+    cout<<"sorted array : ";
     for(int i=0;i<n;i++){
         cout<<arr[i]<<"\n";
     }
