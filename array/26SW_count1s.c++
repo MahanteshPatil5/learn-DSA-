@@ -18,4 +18,23 @@ int main(){
     cout<<"Enter the size of array : ";
     cin>>n;
     int arr[n];
+    cout<<"Enter arr elements : ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    int maxc=0, count=0;
+
+    for(int i=0;i<n;i++){
+        if(arr[i]==1){
+            count++;
+            maxc = max(maxc,count);
+        }
+        else{
+            count = 0;
+        }
+    }
+
+    cout<<"The consecutive 1 in the give array is : "<<maxc;
+
 }
