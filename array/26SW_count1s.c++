@@ -38,3 +38,5 @@ int main(){
     cout<<"The consecutive 1 in the give array is : "<<maxc;
 
 }
+
+// cheat push
