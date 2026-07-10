@@ -1,4 +1,8 @@
 {
+  "code-runner.executorMap": {
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && ./$fileNameWithoutExt.exe"
+  },
+  "code-runner.runInTerminal": true,
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
