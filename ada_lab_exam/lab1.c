@@ -8,6 +8,7 @@ int find(int v){
     while(p[v]){
         v = p[v];
     }
+    return v;
 }
 
 void union1(int i,int j){
@@ -19,9 +20,9 @@ void krushkals(int n){
 
     for(k=1;k<n;k++){
         min = inf;
-        for (int i = 1; i < n; i++)
+        for (i = 1; i < n-1; i++)
         {
-            for (int j = 1; i <= n; j++)
+            for (j = 1; j <= n; j++)
             {
                 if(i==j){
                     continue;
@@ -44,13 +45,25 @@ void krushkals(int n){
     }
         printf("the minimun cost to travel is %d ",sum);
         printf(" connected grph are :" );
-        for (int i = 0; i < n; i++)
+        for (int i = 1; i < n; i++)
         {
-            printf(" %d -> %d ", t[i][j);            
+            printf(" %d -> %d ", t[i][1],t[i][2]);            
         }
         
 }
 int main(){
-    printf("HEllo bro");
+    int n;
+    printf("Enter n value : ");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        p[i] = 0;
+    }
+    printf("enter the graph matrix : ");
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            scanf("%d",&c[i][j]);
+        }
+    }
+    krushkals(n);
     return 0;
 }
