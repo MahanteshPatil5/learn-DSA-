@@ -1,0 +1,1 @@
+FILE="lab6" && cd "g:/3rd sem/3rd sem notes/DSA/DSA learn/ada_lab_exam" && gcc "$FILE.c" -o "$FILE" && ./"$FILE"

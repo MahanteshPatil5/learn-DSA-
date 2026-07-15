@@ -18,7 +18,7 @@ void sort(int a[][10],int id[],int n){
 
 int main(){
     int n,a[10][10],id[10];
-    printf("Topological sorting : ");
+    printf("Topological s orting : ");
     printf("ENter the n value : ");
     scanf("%d",&n);
 
