@@ -43,7 +43,10 @@ void Fsum(int arr[]){
     for(int i=0;i<n;i++){
         sum += arr[i];
     }
+
+    int avg = sum/n;
     cout<<"sum of elements : "<<sum<<"\n";
+    cout<<"Avarage of elements : "<<avg<<"\n";
 }
 
 void Frev(int arr[]){
@@ -77,7 +80,9 @@ int main(){
     Fmax(arr);
     Fmin(arr);
     Fsum(arr);
+
     Frev(arr);
+
 
     return 0;
 }
